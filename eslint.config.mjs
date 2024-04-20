@@ -16,12 +16,12 @@ const compat = new FlatCompat({
 
 export default [
     { languageOptions: { globals: globals.browser, sourceType: "module" } },
-    {
-        files: ["**/*.js"],
-        rules: {
-            "import/no-named-as-default": "off",
-        },
-    },
     ...compat.extends("airbnb-base"),
     eslintConfigPrettier,
+    {
+        rules: {
+            "import/no-named-as-default": "off",
+            "import/no-named-as-default-member": "off",
+        },
+    },
 ];
