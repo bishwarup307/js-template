@@ -1,0 +1,39 @@
+{
+    "name": "js-template",
+    "version": "1.0.0",
+    "description": "A template repository configured with Vanilla JS, Webpack, Tailwind CSS and ESLint",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --config webpack.prod.js",
+        "dev": "webpack serve --open --config webpack.dev.js",
+        "publish": "npm run build && git subtree push --prefix dist origin gh-pages"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.0.2",
+        "@eslint/js": "^9.1.1",
+        "css-loader": "^6.10.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "globals": "^15.0.0",
+        "html-webpack-plugin": "^5.6.0",
+        "postcss": "^8.4.38",
+        "postcss-loader": "^8.1.1",
+        "postcss-preset-env": "^9.5.2",
+        "style-loader": "^3.3.4",
+        "tailwindcss": "^3.4.3",
+        "webpack": "^5.90.3",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.0.3",
+        "webpack-merge": "^5.10.0"
+    },
+    "dependencies": {
+        "dayjs": "^1.11.10",
+        "nanoid": "^5.0.6"
+    }
+}
