@@ -3,6 +3,9 @@ module.exports = {
     darkMode: "class",
     content: ["./src/**/*.{html,js}", "./node_modules/flowbite/**/*.js"],
     theme: {
+        container: {
+            center: true,
+        },
         screens: {
             sm: "480px",
             md: "768px",
@@ -11,6 +14,15 @@ module.exports = {
             dxl: "1980px",
         },
         extend: {
+            keyframes: {
+                spin: {
+                    "0%": { transform: "rotate(0deg)" },
+                    "100%": { transform: "rotate(360deg)" },
+                },
+            },
+            animation: {
+                "slow-spin": "spin 3s linear infinite", // Custom spin duration of 3 seconds
+            },
             backgroundImage: {
                 hero: "url('/src/assets/hero.png')",
             },
